@@ -1,4 +1,4 @@
-winget install 9PJPW5LDXLZ5
+winget install Python.Python.3
 pip install --upgrade pip
 pip install keyboard
 pip install colorama
