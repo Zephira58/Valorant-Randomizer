@@ -79,7 +79,7 @@ while True:
             input("Press Enter to return: ")
             intro()    
     elif keyboard.read_key() == "w":
-        weapons = ['Classic ', 'Shorty ', 'Frenzy ', 'Ghost ', 'Sheriff ', 'Stinger ', 'Spectre ', 'Bucky ', 'Judge ', 'Bulldog ', 'Guardian ', 'Phantom', 'Vandal', 'Marshal ', 'Operator', 'Ares ', 'Odin ', 'Knife ']
+        weapons = ['Classic ', 'Shorty ', 'Frenzy ', 'Ghost ', 'Sheriff ', 'Stinger ', 'Spectre ', 'Bucky ', 'Judge ', 'Bulldog ', 'Guardian ', 'Phantom ', 'Vandal ', 'Marshal ', 'Operator ', 'Ares ', 'Odin ', 'Knife ']
         cls()
         print("Press 1 to generate a singular weapon.")
         enter()
