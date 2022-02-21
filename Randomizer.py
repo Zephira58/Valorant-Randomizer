@@ -1,6 +1,5 @@
 import random
 import keyboard
-import requests
 from colorama import Fore, Back, Style
 import os
 import time
