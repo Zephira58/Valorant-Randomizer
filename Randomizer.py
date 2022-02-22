@@ -24,15 +24,15 @@ def white():
 def intro():
     white()
     cls()
-    print("Hold 'A' to randomly generate Agents")
+    print("Press 'A' to randomly generate Agents")
     enter()
-    print("Hold 'W' To randomly Generate Weapons")
+    print("Press 'W' To randomly Generate Weapons")
     enter()
-    print("Hold 'S' To generate shields")
+    print("Press 'S' To generate shields")
     enter()
-    print("Hold 'Q' to exit")
+    print("Press 'Q' to exit")
     enter()
-    print("Hold 'C' for credits")
+    print("Press 'C' for credits")
     enter()
 def gen():
     cls()
@@ -59,7 +59,6 @@ while True:
         print("Press 1 to generate a singular Agent.")
         enter()
         print("Press 2 to generate team Agents")
-        time.sleep(1)
         if keyboard.read_key() == '1': # Detects if the user presses 1 or 2 on their keyboard and reacts acordingly
             gen() #Displays the generating animation
             print(random.choice(agents)) #Displays the singular agent
@@ -94,12 +93,12 @@ while True:
             intro()
             #Same Code as above; just edited
     elif keyboard.read_key() == "w":
-        weapons = ['Classic, ', 'Shorty, ', 'Frenzy, ', 'Ghost, ', 'Sheriff, ', 'Stinger, ', 'Spectre, ', 'Bucky, ', 'Judge, ', 'Bulldog, ', 'Guardian, ', 'Phantom, ', 'Vandal, ', 'Marshal, ', 'Operator, ', 'Ares, ', 'Odin, ', 'Knife ']
+        weapons = [Fore.WHITE + 'Classic, ',Fore.MAGENTA + 'Shorty, ',Fore.YELLOW + 'Frenzy, ',Fore.WHITE +  'Ghost, ',Fore.WHITE +  'Sheriff, ',Fore.YELLOW + 'Stinger, ',Fore.YELLOW + 'Spectre, ',Fore.MAGENTA + 'Bucky, ',Fore.MAGENTA + 'Judge, ',Fore.RED +  'Bulldog, ',Fore.RED +  'Guardian, ',Fore.RED +  'Phantom, ',Fore.RED +  'Vandal, ',Fore.CYAN + 'Marshal, ',Fore.CYAN + 'Operator, ',Fore.RED +  'Ares, ',Fore.RED +  'Odin, ',Fore.WHITE +  'Knife, ']
+        white()
         cls()
         print("Press 1 to generate a singular weapon.")
         enter()
         print("Press 2 to generate team weapons")
-        time.sleep(1)
         if keyboard.read_key() == '1':
             gen()
             print(random.choice(weapons))
@@ -119,20 +118,18 @@ while True:
             intro()
             #Same Code as above; just edited
     elif keyboard.read_key() == 's':
-        shields = ['Light, ', 'Heavy, ', 'None ']
+        shields = [Fore.YELLOW + 'Light, ',Fore.GREEN + 'Heavy, ',Fore.WHITE + 'None, ']
+        white()
         cls()
         print("Press 1 to generate a singular sheild.")
         enter()
         print("Press 2 to generate team sheilds")
-        time.sleep(1)
-        time.sleep(1)
         if keyboard.read_key() == '1':
             gen()
             print(random.choice(shields))
             tc()
             intro()
         elif keyboard.read_key() == '2':
-            gen()
             s1 = random.choice(shields)
             s2 = random.choice(shields)
             s3 = random.choice(shields)
@@ -145,8 +142,8 @@ while True:
             input("Press Enter to return: ")
             intro()
     elif keyboard.read_key() == "q":#Detects if the user presses a button on their keyboard in this case its 'q'
-        exit() #Closes the aqqqpplication
-    #When "C" is pressed it will show the my credits
+        break #Closes the application
+    #When "C" is pressed it will show my credits
     elif keyboard.read_key() == "c":#Detects if the user presses a button on their keyboard in this case its 'c'
         cls()
         print("Made by Xanthus In my spare time")
