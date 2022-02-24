@@ -28,11 +28,13 @@ def intro():
     enter()
     print("Press 'W' To randomly Generate Weapons")
     enter()
+    print("Press 'E' to generate abilities")
+    enter()
     print("Press 'S' To generate shields")
     enter()
-    print("Press 'Q' to exit")
-    enter()
     print("Press 'C' for credits")
+    enter()
+    print("Hold 'Q' to exit")
     enter()
 def gen():
     cls()
@@ -47,11 +49,19 @@ def gen():
     cls()
     print('Generating...')
     cls()
+def invalid():
+    enter()
+    print("Sorry your input is invalid please try again")
+    tc()
+    intro()
 #---------------------------
 intro()
 #Makes an infinite reapeating loop
 while True:
-    if keyboard.read_key() == "a": #Registers keyboard inputs in this case its the letter "A"
+    if keyboard.read_key() == "q":#Detects if the user presses a button on their keyboard in this case its 'q'
+        break #Closes the application
+    #When "C" is pressed it will show my credits
+    elif keyboard.read_key() == "a": #Registers keyboard inputs in this case its the letter "A"
         #Lists all of the current agents in the game, in colour
         agents = [Fore.YELLOW +  'Breach, ',Fore.YELLOW +  'Killjoy, ',Fore.BLUE +  'Neon, ',Fore.MAGENTA +  'Astra, ',Fore.YELLOW +  'Brimstone, ',Fore.YELLOW +  'Chamber, ','Cypher, ',Fore.BLUE +  'Jett, ',Fore.BLUE +  'Kayo, ',Fore.MAGENTA + 'Omen, ',Fore.YELLOW +  'Phoenix, ',Fore.YELLOW +  'Raze, ',Fore.MAGENTA +  'Reyna, ',Fore.GREEN +  'Sage, ',Fore.GREEN +  'Skye, ',Fore.BLUE +  'Sova, ',Fore.GREEN +  'Viper, ',Fore.BLUE +  'Yoru, ']
         #Displays a message on singular or team selection
@@ -89,9 +99,36 @@ while True:
             print(a1 + a2 + a3 + a4 + a5)#Displays all 5 agents that where randomly chosen
             enter()#Effectivly mimicing a return in the terminal; creating a new line
             white()#Sets the terminal colour back to white; from rendering colourd agents
-            input("Press Enter to return: ")#Awaits user input before returning to the intro
+            input("Press Enter to return \n")#Awaits user input before returning to the intro
             intro()
             #Same Code as above; just edited
+        else:
+            invalid()
+    elif keyboard.read_key() == "e":
+        white()
+        cls()
+        Abilities = ["C,", "Q,", "E,", "None,", "All,", "C+Q,", "C+E,", "Q+E,", "Q+C,"]
+        print("Press 1 to generate a singular ability")
+        enter()
+        print("Press 2 to generate team abilites")
+        if keyboard.read_key() == "1":
+            gen()
+            print(random.choice(Abilities))
+            time.sleep(5)
+            intro()
+        elif keyboard.read_key() == "2":
+            e1 = random.choice(Abilities)
+            e2 = random.choice(Abilities)
+            e3 = random.choice(Abilities)
+            e4 = random.choice(Abilities)
+            e5 = random.choice(Abilities)
+            gen()
+            print(e1,e2,e3,e4,e5)
+            enter()
+            input("Press Enter to return\n")
+            intro()
+        else:
+            invalid()
     elif keyboard.read_key() == "w":
         weapons = [Fore.WHITE + 'Classic, ',Fore.MAGENTA + 'Shorty, ',Fore.YELLOW + 'Frenzy, ',Fore.WHITE +  'Ghost, ',Fore.WHITE +  'Sheriff, ',Fore.YELLOW + 'Stinger, ',Fore.YELLOW + 'Spectre, ',Fore.MAGENTA + 'Bucky, ',Fore.MAGENTA + 'Judge, ',Fore.RED +  'Bulldog, ',Fore.RED +  'Guardian, ',Fore.RED +  'Phantom, ',Fore.RED +  'Vandal, ',Fore.CYAN + 'Marshal, ',Fore.CYAN + 'Operator, ',Fore.RED +  'Ares, ',Fore.RED +  'Odin, ',Fore.WHITE +  'Knife, ']
         white()
@@ -102,7 +139,7 @@ while True:
         if keyboard.read_key() == '1':
             gen()
             print(random.choice(weapons))
-            tc()
+            cls()
             intro()
         elif keyboard.read_key() == '2':
             w1 = random.choice(weapons)
@@ -114,9 +151,11 @@ while True:
             print(w1 + w2 + w3 + w4 + w5)
             enter()
             white()
-            input("Press Enter to return: ")
+            input("Press Enter to return\n")
             intro()
             #Same Code as above; just edited
+        else:
+            invalid()
     elif keyboard.read_key() == 's':
         shields = [Fore.YELLOW + 'Light, ',Fore.GREEN + 'Heavy, ',Fore.WHITE + 'None, ']
         white()
@@ -127,7 +166,7 @@ while True:
         if keyboard.read_key() == '1':
             gen()
             print(random.choice(shields))
-            tc()
+            cls()
             intro()
         elif keyboard.read_key() == '2':
             s1 = random.choice(shields)
@@ -139,11 +178,10 @@ while True:
             print(s1 + s2 + s3 + s4 + s5)
             enter()
             white()
-            input("Press Enter to return: ")
+            input("Press Enter to return\n")
             intro()
-    elif keyboard.read_key() == "q":#Detects if the user presses a button on their keyboard in this case its 'q'
-        break #Closes the application
-    #When "C" is pressed it will show my credits
+        else:
+            invalid()
     elif keyboard.read_key() == "c":#Detects if the user presses a button on their keyboard in this case its 'c'
         cls()
         print("Made by Xanthus In my spare time")
@@ -155,6 +193,6 @@ while True:
         print("Feel free to fork; submit issues; or otherwise interact with the project here!")
         print("https://github.com/Xanthus58/Valorant-Randomizer")
         enter()
-        input("Press Enter to return to the main menu: ")
+        input("Press Enter to return to the main menu\n")
         cls()
         intro()
