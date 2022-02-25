@@ -139,7 +139,7 @@ while True:
         if keyboard.read_key() == '1':
             gen()
             print(random.choice(weapons))
-            cls()
+            time.sleep(5)
             intro()
         elif keyboard.read_key() == '2':
             w1 = random.choice(weapons)
@@ -166,7 +166,7 @@ while True:
         if keyboard.read_key() == '1':
             gen()
             print(random.choice(shields))
-            cls()
+            time.sleep(5)
             intro()
         elif keyboard.read_key() == '2':
             s1 = random.choice(shields)
