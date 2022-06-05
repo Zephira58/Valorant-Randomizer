@@ -59,11 +59,21 @@ intro()
 #Makes an infinite reapeating loop
 while True:
     if keyboard.read_key() == "q":#Detects if the user presses a button on their keyboard in this case its 'q'
+        cls()
+        print("Made by Xanthus In my spare time")
+        enter()
+        print("Check out my other works at https://github.com/Xanthus58")
+        enter()
+        print("Email me on 'Xanthus58@protonmail.com'")
+        enter()
+        print("Feel free to fork; submit issues; or otherwise interact with the project here!")
+        print("https://github.com/Xanthus58/Valorant-Randomizer")
+        time.sleep(5)
         break #Closes the application
     #When "C" is pressed it will show my credits
     elif keyboard.read_key() == "a": #Registers keyboard inputs in this case its the letter "A"
         #Lists all of the current agents in the game, in colour
-        agents = [Fore.YELLOW +  'Breach, ',Fore.YELLOW +  'Killjoy, ',Fore.BLUE +  'Neon, ',Fore.MAGENTA +  'Astra, ',Fore.YELLOW +  'Brimstone, ',Fore.YELLOW +  'Chamber, ','Cypher, ',Fore.BLUE +  'Jett, ',Fore.BLUE +  'Kayo, ',Fore.MAGENTA + 'Omen, ',Fore.YELLOW +  'Phoenix, ',Fore.YELLOW +  'Raze, ',Fore.MAGENTA +  'Reyna, ',Fore.GREEN +  'Sage, ',Fore.GREEN +  'Skye, ',Fore.BLUE +  'Sova, ',Fore.GREEN +  'Viper, ',Fore.BLUE +  'Yoru, ']
+        agents = [Fore.YELLOW +  'Breach, ',Fore.YELLOW +  'Killjoy, ',Fore.BLUE +  'Neon, ',Fore.MAGENTA +  'Astra, ',Fore.YELLOW +  'Brimstone, ',Fore.YELLOW +  'Chamber, ','Cypher, ',Fore.BLUE +  'Jett, ',Fore.BLUE +  'Kayo, ',Fore.MAGENTA + 'Omen, ',Fore.YELLOW +  'Phoenix, ',Fore.YELLOW +  'Raze, ',Fore.MAGENTA +  'Reyna, ',Fore.GREEN +  'Sage, ',Fore.GREEN +  'Skye, ',Fore.BLUE +  'Sova, ',Fore.GREEN +  'Viper, ',Fore.BLUE +  'Yoru, ',Fore.RED +  'Fade, ']
         #Displays a message on singular or team selection
         cls()
         print("Press 1 to generate a singular Agent.")
