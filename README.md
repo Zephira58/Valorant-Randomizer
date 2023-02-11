@@ -1,6 +1,6 @@
 # Valorant-Randomizer
 
-### Easily install the app by typing "Winget install Xanthus.ValorantRandomizer" in your CLI
+### Easily install the app by typing "Winget install Xanthus58.ValorantRandomizer" in your CLI
 It will automaticly download and install onto your system using microsofts package manager built into newer versions of windows.
 
 A randomizer for Valorant; it has will automaticly select an agent; weapons and shields. Feel free to fork or suggest changes!
