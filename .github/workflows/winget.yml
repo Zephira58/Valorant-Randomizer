@@ -7,10 +7,9 @@ jobs:
   publish:
     runs-on: windows-latest
     steps:
-      - uses: vedantmgoyal2009/winget-releaser@v1
+      - uses: vedantmgoyal2009/winget-releaser@v2
         with:
           identifier: Xanthus58.ValorantRandomizer
           version: ${{ github.event.release.tag_name }}
           installers-regex: '\.exe$'
-          delete-previous-version: 'true'
           token: ${{ secrets.WINGET_TOKEN }} 
